@@ -6,7 +6,7 @@ if [ -z "$1" ]; then
 fi
 OLDSIZE=`ls -l $1 | awk '{ print $5}'`
 
-./pngquant --force --skip-if-larger $1 --output $1.tmp
+pngquant --force  $1 --output $1.tmp
 
 if [ -f $1.tmp ]; then 
 mv $1.tmp $1
